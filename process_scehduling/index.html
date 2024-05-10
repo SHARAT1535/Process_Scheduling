@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Process Scheduling</title>
+</head>
+<body>
+    <h1>Process Scheduling Problem Solver</h1>
+    <label for="myselect">Algorithm</label>
+    <select id="mySelect">
+        <option value="op1">First come First serve</option>
+        <option value="op2">Shortest job first</option>
+        <option value="op3">Round Robin</option>
+    </select>   
+    <br>
+    <label for="at">Arrival Time</label>
+    <input type="text" id="at" placeholder="e.g. 1 2 3 4">
+    <br>
+    <label for="bt">Burst Time</label>
+    <input type="text" id="bt" placeholder="e.g. 1 2 3 4">
+    <br>
+    <button onclick="calculate()">Submit</button>
+    <h3>Output</h3>
+    <div id="output">
+        <table id="resultTable" border="1" cellpadding="5" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Completion Time</th>
+                    <th>Turnaround Time</th>
+                    <th>Waiting Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Results will be displayed here -->
+            </tbody>
+            <tfoot>
+                <tr>    
+                    <td id="avgTAT"></td>
+                    <td id="avgWT"></td>
+                </tr>
+            </tfoot>
+        </table>
+        <h2>Gantt Chart</h2>
+        <div id="ganttchart"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+    
